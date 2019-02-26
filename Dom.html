@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body onload="tab()">
+
+ 
+
+<script>
+var arr = [
+{
+    FirstName:"Prakhar",
+    LastName:"Saxena",
+    Email:"prakharsaxena2@gmail.com",
+    Id:1,
+    PhoneNumber:8737801317,
+    Designation:"Developer",
+    DOM:"22/04/1996",
+},
+
+{
+    FirstName:"Mansish",
+    LastName:"Kumar",
+    Email:"manishkumar@gmail.com",
+    Id:2,PhoneNumber:8737801991,
+    Designation:"Developer",
+    DOM:"2/05/1997",
+},
+
+
+{
+    FirstName:"Shivang",
+    LastName:"Mishra",
+    Email:"shivangmishra@gmail.com",
+    Id:3,
+    PhoneNumber:9737801991,
+    Designation:"Developer",
+    DOM:"6/09/1997",
+},
+
+{
+    FirstName:"Nickhil",
+    LastName:"Rawat",
+    Email:"nickhilrawat@gmail.com",
+    Id:4,
+    PhoneNumber:9937801991,
+    Designation:"Developer",
+    DOM:"30/09/1996",
+},
+
+{
+    FirstName:"Ishan",
+    LastName:"Nirmal",
+    Email:"ishannirmal@gmail.com",
+    Id:5,
+    PhoneNumber:9997801991,
+    Designation:"Developer",
+    DOM:"6/09/1996",
+},
+]
+var keys;
+var values;
+
+function tab(){
+
+    keys = Object.keys(arr[1])
+    
+    
+    values =arr.map((element,index)=>{
+        return Object.values(arr[index])
+    
+    })
+
+    
+    var td =[];
+    var text =[];
+    var table = document.createElement('table');
+    table.border="1";
+    var thead = document.createElement('thead');
+
+    table.appendChild(thead);
+
+    for(var i=0;i<keys.length;i++){
+    thead.appendChild(document.createElement("th")).
+    appendChild(document.createTextNode(keys[i]));
+    }
+
+    for (var i = 0; i < values.length; i++){
+        var tr = document.createElement('tr');    
+        for(let j=0;j<keys.length;j++){
+             td[j] =document.createElement('td');
+             text[j] = document.createTextNode(values[i][j]);
+             td[j].appendChild(text[j]);
+             tr.appendChild(td[j])
+
+        }
+
+      
+   // var tr = document.createElement('tr');   
+
+    //var td1 = document.createElement('td');
+    //var td2 = document.createElement('td');
+
+    // var text1 = document.createTextNode('Text1');
+    // var text2 = document.createTextNode('Text2');
+
+    // td1.appendChild(text1);
+    // td2.appendChild(text2);
+    // tr.appendChild(td1);
+    // tr.appendChild(td2);
+
+    table.appendChild(tr);
+}
+document.body.appendChild(table);
+    
+    // for(let i=1;i<=values.length;i++){
+    //     rows = table.insertRow(i);
+    //     for(let j =0;j<keys.length;j++){
+    //         var rows[i]
+    //     }
+    // }
+
+  
+//   var cell1 = row.insertCell(0);
+//   var cell2 = row.insertCell(1);
+//   cell1.innerHTML = "NEW CELL1";
+//   cell2.innerHTML = "NEW CELL2";
+
+
+}
+// function createTable() {
+    
+// }
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
